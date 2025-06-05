@@ -1,0 +1,90 @@
+Reset & base */
+body {
+  font-family: sans-serif;
+  background-image: url('https://www.pinterest.com/pin/20336635812765212/'); /* adjust path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff; /* Light text for contrast */
+  text-align: center;
+  padding: 2em;
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Dark overlay on background for better contrast */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+header {
+  background-color: #2e8b57;
+  color: white;
+  padding: 1em 0;
+}
+
+/* Improve header text visibility */
+header h1, header h2 {
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  margin: 0.3em 0;
+  font-weight: bold;
+}
+
+main section {
+  margin-top: 2em;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1em;
+  background-color: #2e8b57;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+button {
+  margin-top: 1.5em;
+  background-color: #2e8b57;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #246e45;
+}
+
+#formMessage {
+  margin-top: 1em;
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
