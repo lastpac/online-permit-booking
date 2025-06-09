@@ -85,3 +85,84 @@
   </script>
 </body>
 </html>
+<!-- File: application.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Permit Application | Sugarcane Co.</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hidden { display: none; }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, select, textarea, button { width: 100%; padding: 10px; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>WEST KENYA SUGAR COMPANY</h1>
+    <h2>Online Permit Application</h2>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>Use this website to apply for a sugarcane cutting and transport permit.</p>
+      <a href="#" id="startApplicationBtn">Start Application</a>
+    </section>
+
+    <section class="form-section hidden" id="applicationFormSection">
+      <h2>Apply for a Permit</h2>
+      <form id="permitForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="permitType">Permit Type:</label>
+        <select id="permitType" name="permitType" required>
+          <option value="">Select a permit</option>
+          <option value="cutting">Sugarcane Cutting</option>
+          <option value="processing">Processing Permit</option>
+        </select>
+
+        <label for="ageOfCane">Age of the sugarcane:</label>
+        <select id="ageOfCane" name="ageOfCane" required>
+          <option value="">Choose appropriate</option>
+          <option value="Above Eighteen months">Above Eighteen months</option>
+          <option value="Below Twelve months">Below Twelve months</option>
+        </select>
+
+        <label for="details">Permit Details:</label>
+        <textarea id="details" name="details" rows="4" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+
+      <div id="formMessage" class="hidden">✅ Your application has been submitted!</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sugarcane Co. | All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("startApplicationBtn").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("applicationFormSection").classList.remove("hidden");
+      document.getElementById("applicationFormSection").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("permitForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("formMessage").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
